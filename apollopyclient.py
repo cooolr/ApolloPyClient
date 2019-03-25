@@ -122,7 +122,7 @@ class ApolloPyClient:
             if self.filename:
                 with open(self.filename, "w", encoding="utf-8") as f:
                     f.write(json.dumps(self.configurations))
-        logging.info("update config done. requests.status_code: {}".format(requests.status_code))
+        logging.info("update config done. requests.status_code: {}".format(r.status_code))
 
     def schedule_update(self, interval):
         """
